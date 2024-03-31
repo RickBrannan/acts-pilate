@@ -71,7 +71,7 @@ for book_unit in index_root.xpath("*//unit[@name = 'Book']"):
 
                 pos = get_pos(morph_text)
                 parse_code = map_logos_morph(morph_text)
-                print(f"Word: {wn_element.text}, {surface_text}, {normalized}, {lemma_text}, {pos}, {parse_code}")
+                # print(f"Word: {wn_element.text}, {surface_text}, {normalized}, {lemma_text}, {pos}, {parse_code}")
 
                 bcv = f"{book_name}.{chapter_number}.{verse_number}"
                 morph_unit = MorphUnit(bcv, pos, parse_code, surface_text, surface_element.text, normalized,

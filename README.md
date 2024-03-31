@@ -49,10 +49,14 @@ public release.
 * NU number (not in Tauber)
 * P- preposition  
 * RA definite article  
+* RC reciprocal pronoun
 * RD demonstrative pronoun  
+* RF reflexive pronoun
 * RI interrogative/indefinite pronoun  
+* RK correlative pronoun
 * RP personal pronoun  
 * RR relative pronoun  
+* RS possessive pronoun
 * TL transliterated (not in Tauber)
 * V- verb  
 * X- particle  

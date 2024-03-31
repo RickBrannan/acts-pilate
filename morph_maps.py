@@ -1,6 +1,6 @@
 import regex as re
 
-pos_map = {'N': 'N-', 'V': 'V-', 'J': 'A-', 'D': 'RA', 'B': 'D-', 'R': 'R-',
+pos_map = {'N': 'N-', 'V': 'V-', 'J': 'A-', 'D': 'RA', 'B': 'D-',
            'C': 'C-', 'T': 'X-', 'I': 'I-', 'P': 'P-'}
 
 def get_degree_map():
@@ -80,6 +80,18 @@ def map_case_number_gender(morph, return_codes):
 def get_pos(morph_text):
     if morph_text[0] in pos_map:
         return pos_map[morph_text[0]]
+    elif morph_text[:2] == "RP":
+        return "RP"
+    elif morph_text[:2] == "RD":
+        return "RD"
+    elif morph_text[:2] == "RR":
+        return "RR"
+    elif morph_text[:2] == "RI":
+        return "RI"
+    elif morph_text[:2] == "RX":
+        return "RI"
+    elif re.match(r"R[SCKF]", morph_text):
+        return morph_text[:2] # Tauber isn't this specific
     elif morph_text == "XP":
         return "NP"
     elif morph_text == "XN":
@@ -113,7 +125,8 @@ def map_logos_morph(morph):
         return_codes["person"] = morph[2]
         return_codes["case"] = case_map[morph[3]]
         return_codes["number"] = number_map[morph[4]]
-        # return_codes["gender"] = gender_map[morph[5]]
+        if len(morph) == 6:
+            return_codes["gender"] = gender_map[morph[5]]
         return format_return_codes(return_codes)
     elif logos_pos == "V":
         return_codes["tense"] = tense_map[morph[1]]
