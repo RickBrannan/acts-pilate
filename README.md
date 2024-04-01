@@ -2,7 +2,7 @@
 Code and data to create a freely-available, openly-licensed, morphologically annotated edition of the _Acts of Pilate_ 
 (with _Descent of Christ to Hades_).
 
-For more information on the _Acts of Pilate_ and the Descent of Christ to Hades_, see the e-Clavis entry:
+For more information on the _Acts of Pilate_ and the _Descent of Christ to Hades_, see the e-Clavis entry:
 [Acts of Pilate](https://www.nasscal.com/e-clavis-christian-apocrypha/acts-of-pilate-gospel-of-nicodemus/)
 
 ## License
